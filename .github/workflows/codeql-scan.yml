@@ -21,7 +21,7 @@ jobs:
 
     - name: Run CodeQL Scan
       env:
-        SCAN_PATH='../../'
+        SCAN_PATH=$GITHUB_WORKSPACE
       run: |
         cd .ci/openenclave-security
         bash scripts/run.sh
