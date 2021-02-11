@@ -1,0 +1,8 @@
+[submodule "openenclave-security"]
+  path = .ci/openenclave-security
+  url = https://github.com/rs--/openenclave-security.git
+  branch = oe-path-arg
+[submodule "test-infra"]
+	path = .ci/test-infra
+	url = https://github.com/openenclave/test-infra.git
+	branch = master
