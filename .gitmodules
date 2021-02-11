@@ -1,0 +1,4 @@
+[submodule ".ci/openenclave-security"]
+  path = .ci/openenclave-security
+  url = https://github.com/rs--/openenclave-security.git
+  branch = oe-path-arg

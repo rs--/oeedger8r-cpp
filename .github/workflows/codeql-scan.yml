@@ -1,0 +1,27 @@
+on:
+  push:
+    branches:
+      - master
+
+name: 'CodeQL Security Scan'
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Checkout Submodules
+      run: |
+        git submodule init
+        git submodule update
+
+    - name: Run CodeQL Scan
+      env:
+        SCAN_PATH='../../'
+      run: |
+        cd .ci/openenclave-security
+        bash scripts/run.sh
